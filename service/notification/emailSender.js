@@ -1,7 +1,7 @@
 const nodemailer=require("nodemailer");
 const config=require("../../config");
 
-process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+process.env.NODE_ENV = process.env.NODE_ENV || 'production';
 const envConfig = config[process.env.NODE_ENV];
 const configMail = envConfig.configGmail;
 
