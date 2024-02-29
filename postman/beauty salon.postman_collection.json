@@ -1,0 +1,748 @@
+{
+	"info": {
+		"_postman_id": "46d78399-28f3-4c3c-b529-f92bb28f6575",
+		"name": "beauty salon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "23591999"
+	},
+	"item": [
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "client login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"\",\r\n    \"password\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE-URL}}/client/login"
+					},
+					"response": []
+				},
+				{
+					"name": "manager login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"ranjalahynyantsa@gmail.com\",\r\n    \"password\": \"passwordNotCryptedYet123!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE-URL}}/manager/login"
+					},
+					"response": [
+						{
+							"name": "manager login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"ranjalahynyantsa@gmail.com\",\r\n    \"password\": \"passwordNotCryptedYet123!\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BASE-URL}}/manager/login"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "231"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e7-a//42g6FOcBNrorUATeKRu0jbNA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 17 Feb 2024 14:54:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"auth\": true,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzQ3OGRjNjU2MDY3M2Y4MWM4ZDc1MSIsImlhdCI6MTcwODE4MTY2MCwiZXhwIjoxNzA4MjY4MDYwfQ.4JPTz9nWqWk_STl2keKTGsY2yPY3Q0AazpPU1BbdY-M\",\n    \"userId\": \"65c478dc6560673f81c8d751\"\n}"
+						}
+					]
+				},
+				{
+					"name": "employee login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"\",\r\n    \"password\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE-URL}}/employee/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "client section",
+			"item": [
+				{
+					"name": "rendez vous",
+					"item": [
+						{
+							"name": "liste des rendez vous",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "rendez vous selon un id",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "payement d'un rendez vous",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "modification d'un rendez vous",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "manager section",
+			"item": [
+				{
+					"name": "type de dépense",
+					"item": [
+						{
+							"name": "liste des type de dépenses",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{MANAGER-TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": "{{BASE-URL}}/type_depense-crud"
+							},
+							"response": [
+								{
+									"name": "liste des type de dépenses",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{MANAGER-TOKEN}}",
+												"type": "text"
+											}
+										],
+										"url": "{{BASE-URL}}/type_depense-crud"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "531"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"213-lmCKi2C+dkfh7oYrqU9jiarvDSE\""
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 17 Feb 2024 15:02:25 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"_id\": \"65c221c43fe8b2bd4b8f7d7c\",\n        \"code\": \"SAL\",\n        \"nom\": \"Salaire\",\n        \"status\": 1\n    },\n    {\n        \"_id\": \"65c221cc3fe8b2bd4b8f7d7d\",\n        \"code\": \"LOY\",\n        \"nom\": \"Loyer\",\n        \"status\": 1\n    },\n    {\n        \"_id\": \"65c221ea3fe8b2bd4b8f7d7e\",\n        \"code\": \"ACH\",\n        \"nom\": \"Achat\",\n        \"status\": 1\n    },\n    {\n        \"_id\": \"65c222023fe8b2bd4b8f7d7f\",\n        \"code\": \"AUT\",\n        \"nom\": \"Autres\"\n    },\n    {\n        \"_id\": \"65d0bf2d648f318724ec14ff\",\n        \"body\": {\n            \"id\": \"\",\n            \"code\": \"MAT\",\n            \"nom\": \"materiel\"\n        }\n    },\n    {\n        \"_id\": \"65d0bfc5648f318724ec1500\",\n        \"body\": {\n            \"id\": \"\",\n            \"code\": \"MAT2\",\n            \"nom\": \"material 2\"\n        }\n    },\n    {\n        \"_id\": \"65d0c06e648f318724ec1501\",\n        \"body\": {\n            \"id\": \"\",\n            \"code\": \"test\",\n            \"nom\": \"test\"\n        }\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "modification d'un type de dépense",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{MANAGER-TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"code\":\"TEST\",\r\n    \"nom\":\"Test2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BASE-URL}}/type_depense-crud/65d0d9f238be344f3cffb78d"
+							},
+							"response": [
+								{
+									"name": "Failed modification d'un type de dépense",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{MANAGER-TOKEN}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"code\":\"TEST\",\r\n    \"nom\":\"Test2\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE-URL}}/type_depense-crud/65d0cd07cebc7d07f95958e9"
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "260"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"104-KCbC2Mcm/7vDVM8Z1yV1cRS6ty4\""
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 17 Feb 2024 15:13:32 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 500,\n    \"message\": {\n        \"ok\": 0,\n        \"code\": 9,\n        \"codeName\": \"FailedToParse\",\n        \"$clusterTime\": {\n            \"clusterTime\": \"7336589313129316353\",\n            \"signature\": {\n                \"hash\": \"nrc/XizvENtXYQeP72Vu2OZjSaw=\",\n                \"keyId\": \"7323209197217120261\"\n            }\n        },\n        \"operationTime\": \"7336589313129316353\",\n        \"name\": \"MongoError\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "nouveau type de dépense",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{MANAGER-TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"code\":\"TEST\",\r\n    \"nom\":\"Test\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BASE-URL}}/type_depense-crud"
+							},
+							"response": [
+								{
+									"name": "nouveau type de dépense",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{MANAGER-TOKEN}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"code\":\"TEST\",\r\n    \"nom\":\"Test\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE-URL}}/type_depense-crud"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "61"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"3d-9A0Pl44YBaKWOfJSwtJbxShScEU\""
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 17 Feb 2024 15:13:11 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": \"TEST\",\n    \"nom\": \"Test\",\n    \"_id\": \"65d0cd07cebc7d07f95958e9\"\n}"
+								}
+							]
+						},
+						{
+							"name": "suppression d'un type de dépense",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{MANAGER-TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": "{{BASE-URL}}/type_depense-crud/65d0c06e648f318724ec1501"
+							},
+							"response": [
+								{
+									"name": "suppression d'un type de dépense",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{MANAGER-TOKEN}}",
+												"type": "text"
+											}
+										],
+										"url": "{{BASE-URL}}/type_depense-crud/65d0c06e648f318724ec1501"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "73"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"49-+gV4l07/dCVSsVRLTugWHRTRee8\""
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 17 Feb 2024 15:11:04 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 200,\n    \"message\": \"Document deleted\",\n    \"id\": \"65d0c06e648f318724ec1501\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "services",
+					"item": [
+						{
+							"name": "nouveau service",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{MANAGER-TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nom\":\"Test\",\r\n    \"prix\":20000,\r\n    \"duree\":20, \r\n    \"commission\":5,\r\n    \"description\":\"Test 1\",\r\n    \"status\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BASE-URL}}/service-crud"
+							},
+							"response": [
+								{
+									"name": "nouveau service",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{MANAGER-TOKEN}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"nom\":\"Test\",\r\n    \"prix\":20000,\r\n    \"duree\":20, \r\n    \"commission\":5,\r\n    \"description\":\"Test 1\",\r\n    \"status\":1\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE-URL}}/service-crud"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "120"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"78-W1dE+lDQZHAgR8AJKHvNNcclXU0\""
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 17 Feb 2024 15:18:14 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"nom\": \"Test\",\n    \"prix\": 20000,\n    \"duree\": 20,\n    \"commission\": 5,\n    \"description\": \"Test 1\",\n    \"status\": 1,\n    \"_id\": \"65d0ce35cebc7d07f95958eb\"\n}"
+								}
+							]
+						},
+						{
+							"name": "modification de service",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{MANAGER-TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nom\": \"Test\",\r\n    \"prix\": 20000,\r\n    \"duree\": 30,\r\n    \"commission\": 10,\r\n    \"description\": null\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BASE-URL}}/service-crud/65d0ce35cebc7d07f95958eb"
+							},
+							"response": []
+						},
+						{
+							"name": "liste des services",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{MANAGER-TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": "{{BASE-URL}}/service-crud"
+							},
+							"response": [
+								{
+									"name": "liste des services",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{MANAGER-TOKEN}}",
+												"type": "text"
+											}
+										],
+										"url": "{{BASE-URL}}/service-crud"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "607"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"25f-RTHnrN1wy3kvPoovBj6Pe+qC0wQ\""
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 17 Feb 2024 15:21:19 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"_id\": \"65c222d03fe8b2bd4b8f7d85\",\n        \"nom\": \"Manicure\",\n        \"prix\": 25000,\n        \"duree\": 60,\n        \"commission\": 5,\n        \"description\": \"Manicure complète\",\n        \"status\": 1,\n        \"photo\": null\n    },\n    {\n        \"_id\": \"65c223ab3fe8b2bd4b8f7d86\",\n        \"nom\": \"Pédicure\",\n        \"prix\": 35000,\n        \"duree\": 60,\n        \"commission\": 8,\n        \"description\": \"Pédicure complète\",\n        \"status\": 1,\n        \"photo\": null\n    },\n    {\n        \"_id\": \"65c223cd3fe8b2bd4b8f7d87\",\n        \"nom\": \"Soins du visage\",\n        \"prix\": 40000,\n        \"duree\": 40,\n        \"commission\": 6,\n        \"description\": \"Soins du visage à base de produits naturels\",\n        \"status\": 1,\n        \"photo\": null\n    },\n    {\n        \"_id\": \"65d0ce35cebc7d07f95958eb\",\n        \"nom\": \"Test\",\n        \"prix\": 20000,\n        \"duree\": 20,\n        \"commission\": 5,\n        \"description\": \"Test 1\",\n        \"status\": 1\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "suppression de service",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "{{BASE-URL}}/service-crud/65d0ce35cebc7d07f95958eb"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "employee section",
+			"item": []
+		},
+		{
+			"name": "common",
+			"item": [
+				{
+					"name": "liste de mode de paiement",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE-URL",
+			"value": "http://localhost:3000",
+			"type": "string"
+		},
+		{
+			"key": "MANAGER-TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzQ3OGRjNjU2MDY3M2Y4MWM4ZDc1MSIsImlhdCI6MTcwODE4MTY2MCwiZXhwIjoxNzA4MjY4MDYwfQ.4JPTz9nWqWk_STl2keKTGsY2yPY3Q0AazpPU1BbdY-M",
+			"type": "string"
+		},
+		{
+			"key": "CLIENT-TOKEN",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "EMPLOYEE-TOKEN",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "AUTH-MANAGER",
+			"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzQ3OGRjNjU2MDY3M2Y4MWM4ZDc1MSIsImlhdCI6MTcwODE4MTY2MCwiZXhwIjoxNzA4MjY4MDYwfQ.4JPTz9nWqWk_STl2keKTGsY2yPY3Q0AazpPU1BbdY-M",
+			"type": "string"
+		}
+	]
+}
