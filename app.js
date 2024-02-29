@@ -23,9 +23,8 @@ dotenv.config();
 const cors = require('cors');
 const {addStatutAppointmentMiddlewareForClient} = require("./middleware/appointment");
 const {notificationService} = require("./service/notification/notification");
-process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
-const envConfig = config[process.env.NODE_ENV];
+const envConfig = config['production'];
 
 const connectionString = envConfig.mongoURI;
 
